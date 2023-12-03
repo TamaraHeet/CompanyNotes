@@ -23,16 +23,22 @@ public class Note {
         this.content = content;
     }
 
-
     // New method to add a new note
     public static Note addNewNote(String title, String content) {
         return new Note(title, content);
     }
-}
 
-    // New method to edit the content of the note
+    // Hotfix: Fix the editNoteContent method
     public void editNoteContent(String newContent) {
-        this.content = newContent;
+        // Apply the fix to address the critical bug
+        if (newContent != null) {
+            this.content = newContent;
+        } else {
+            // Handle the case where newContent is null
+            System.err.println("Error: newContent cannot be null.");
+        }
     }
-}
 
+    // Update the version number
+    public static final String VERSION = "1.0.1";
+}
