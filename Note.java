@@ -22,4 +22,9 @@ public class Note {
     public void setContent(String content) {
         this.content = content;
     }
+
+    // New method to edit the content of the note
+    public void editNoteContent(String newContent) {
+        this.content = newContent;
+    }
 }
